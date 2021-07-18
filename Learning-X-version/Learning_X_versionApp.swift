@@ -12,6 +12,7 @@ struct Learning_X_versionApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(ContentModel())
         }
     }
 }
