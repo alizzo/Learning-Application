@@ -4,10 +4,9 @@
 //
 //  Created by X on 7/18/21.
 //
-
 import Foundation
 
-struct Module: Decodable, Identifiable{
+struct Module: Decodable, Identifiable {
     
     var id: Int
     var category: String
@@ -15,7 +14,8 @@ struct Module: Decodable, Identifiable{
     var test: Test
 }
 
-struct Content: Decodable, Identifiable{
+struct Content: Decodable, Identifiable {
+    
     var id: Int
     var image: String
     var time: String
@@ -24,24 +24,27 @@ struct Content: Decodable, Identifiable{
     
 }
 
-struct Lesson: Decodable, Identifiable{
+struct Lesson: Decodable, Identifiable {
+    
     var id: Int
     var title: String
     var video: String
     var duration: String
-    var explaination: String
+    var explanation: String
     
 }
 
-struct Test: Decodable, Identifiable{
+struct Test: Decodable, Identifiable {
+    
     var id: Int
     var image: String
     var time: String
     var description: String
-    var question: [Question]
+    var questions: [Question]
 }
 
-struct Question: Decodable, Identifiable{
+struct Question: Decodable, Identifiable {
+    
     var id: Int
     var content: String
     var correctIndex: Int
