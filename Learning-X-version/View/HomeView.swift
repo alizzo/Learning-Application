@@ -26,11 +26,40 @@ struct HomeView: View {
                           
                         HStack{
                             //image
-                            Image("Swift")
+                            Image(module.content.image)
+                                .resizable()
+                                .frame(width: 116, height: 116)
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                            
+                            Spacer()
                             
                             //text
-                            
-                       }
+                            VStack(alignment: .leading, spacing: 10){
+                                //Headline
+                                Text("Learn Swift")
+                                
+                                //Decription
+                                Text("description")
+                                    .padding(.bottom, 20)
+                                
+                                //Icons
+                                HStack{
+                                    Image(systemName: "text.book.closed")
+                                        .resizable()
+                                        .frame(width: 15, height: 15)
+                                    Text("20 Lessons")
+                                        .font(.caption)
+                                    
+                                    
+                                    Image(systemName: "clock")
+                                        .resizable()
+                                        .frame(width: 15, height: 15)
+                                    Text("2 hours")
+                                        .font(.caption)
+                                }
+                            }
+                
+                        }.padding(.horizontal, 20)
                     }
                     
                     //test card
